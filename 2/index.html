@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Form 2</title>
+</head>
+<body>
+
+    <!-- Form -->
+    <div class="wrapper">
+        <div class="container">
+            <form method="post" action="action.php" id="regForm">
+                <h1>Register:</h1>
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab name">Name:
+                    <p><input placeholder="First name..." oninput="this.className = ''" name="fname">
+                    </p>
+                    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname">
+                    </p>
+                </div>
+                <div class="tab contact">Contact Info:
+                    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email" type="email"></p>
+                    <p><input placeholder="Password..." oninput="this.className = ''" name="pass" type="password"></p>
+                    <p><input placeholder="Phone..." oninput="this.className = ''" name="ph_number" type="number"></p>
+                </div>
+                <div class="tab dob">Birthday:
+                    <p><input placeholder="dd" oninput="this.className = ''" name="dd" type="number" min="1" max="31"></p>
+                    <p><input placeholder="mm" oninput="this.className = ''" name="mm" type="number" min="1" max="12"></p>
+                    <p><input placeholder="yyyy" oninput="this.className = ''" name="yy" type="number" min="1990" max="2019">
+                    </p>
+                </div>
+                <div class="tab login">Login Info:
+                    <p><input placeholder="Username..." oninput="this.className = ''" name="login_name" type="text"></p>
+                    <p><input placeholder="Password..." oninput="this.className = ''" name="login_pass" type="password"></p>
+                </div>
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    </div>
+                </div>
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+    <!-- Form -->
+
+</body>
+</html>
